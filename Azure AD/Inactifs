@@ -1,0 +1,13 @@
+# Définir la date
+$90DaysAgo = (Get-Date).AddDays(-90)
+
+# Récupérer les informations
+$Users = Get-MgUser -All -Property "DisplayName", "UserPrincipalName", "SignInActivity" | Where-Object {
+    $_.SignInActivity.LastSignInDateTime -lt $90DaysAgo -or $null -eq $_.SignInActivity.LastSignInDateTime
+}
+
+# Affichage rapide dans la console
+$Users | Select-Object DisplayName, UserPrincipalName, @{N='LastLogin'; E={$_.SignInActivity.LastSignInDateTime}} | Format-Table
+
+# Export en CSV si besoin
+$Users | Export-Csv -Path "./UtilisateursInactifs.csv" -NoTypeInformation
