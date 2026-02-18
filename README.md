@@ -1,1 +1,11 @@
-Décharge des scripts powershell pour azure et et windows
+```
+ __________________________________________
+/                                          \
+|  Trop de PowerShell, c'est trop de        |
+|  langage objet                            |
+|  パワーシェルが多すぎる、                   |
+|  オブジェクト指向が多すぎる                 |
+\__________________________________________/
+```
+
+![WHY](img.jpg)
