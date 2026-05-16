@@ -19,9 +19,3 @@ Le script utilise le module **Microsoft Graph** pour interroger la propriété `
     ```
 2.  **Permissions** : Un compte avec au moins le rôle **Lecteur de rapports** ou **Administrateur d'utilisateurs**.
 3.  **Licence** : Une licence **Entra ID P1 ou P2** est requise dans le tenant pour accéder aux données de `signInActivity`.
-
-### Exécution du script
-
-1. Clonez ce dépôt :
-   ```bash
-   git clone [https://github.com/votre-utilisateur/votre-repo.git](https://github.com/votre-utilisateur/votre-repo.git)
